@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAF-uQ-Srs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="ZqR-PH-5jQ">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="bAF-uQ-Srs" customClass="PlayerViewController" customModule="AppleMusic2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hst-Dz-yTf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fr7-fW-XTe">
+                                <rect key="frame" x="61" y="144" width="292" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fr7-fW-XTe" secondAttribute="height" id="RFm-bZ-soo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아무 노래" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-k2-j3J">
+                                <rect key="frame" x="61" y="476" width="292" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지코 선생님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-4H-fNn">
+                                <rect key="frame" x="162" y="530" width="91" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PT7-hr-Bkn">
+                                <rect key="frame" x="61" y="646" width="292" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-Fg-Lwo">
+                                <rect key="frame" x="61" y="668" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-8H-kYw">
+                                <rect key="frame" x="311" y="668" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osv-TD-C9x">
+                                <rect key="frame" x="191" y="705" width="55" height="49"/>
+                                <state key="normal" title="Button" image="play.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                </state>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="bAF-uQ-Srs" eventType="touchUpInside" id="Qqh-G6-nkS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PT7-hr-Bkn" firstAttribute="top" secondItem="ZPW-4H-fNn" secondAttribute="bottom" constant="92" id="3vF-fi-5pv"/>
+                            <constraint firstItem="Xt8-k2-j3J" firstAttribute="top" secondItem="Fr7-fW-XTe" secondAttribute="bottom" constant="40" id="4D4-na-d9g"/>
+                            <constraint firstItem="osv-TD-C9x" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="191" id="9AB-Wo-83K"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="PT7-hr-Bkn" secondAttribute="trailing" constant="61" id="9WG-og-zke"/>
+                            <constraint firstItem="SBE-8H-kYw" firstAttribute="leading" secondItem="3tL-Fg-Lwo" secondAttribute="trailing" constant="204" id="BMQ-FC-fJp"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="ZPW-4H-fNn" secondAttribute="trailing" constant="161" id="F3P-P7-lSG"/>
+                            <constraint firstItem="ZPW-4H-fNn" firstAttribute="top" secondItem="Xt8-k2-j3J" secondAttribute="bottom" constant="24" id="FeA-KW-2pu"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="SBE-8H-kYw" secondAttribute="trailing" constant="57" id="Quy-ut-dpf"/>
+                            <constraint firstItem="osv-TD-C9x" firstAttribute="top" secondItem="PT7-hr-Bkn" secondAttribute="bottom" constant="57" id="R1N-Ni-SBA"/>
+                            <constraint firstItem="ZPW-4H-fNn" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="162" id="SpQ-F6-sQ8"/>
+                            <constraint firstItem="Fr7-fW-XTe" firstAttribute="top" secondItem="r6g-fa-RK8" secondAttribute="top" constant="100" id="WW7-vg-GWH"/>
+                            <constraint firstItem="PT7-hr-Bkn" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="61" id="aLN-Zv-Dd9"/>
+                            <constraint firstItem="Fr7-fW-XTe" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="61" id="b82-Bo-DrH"/>
+                            <constraint firstItem="3tL-Fg-Lwo" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="61" id="bHG-fP-U2W"/>
+                            <constraint firstItem="SBE-8H-kYw" firstAttribute="top" secondItem="PT7-hr-Bkn" secondAttribute="bottom" constant="20" id="boo-pK-aeE"/>
+                            <constraint firstItem="3tL-Fg-Lwo" firstAttribute="top" secondItem="PT7-hr-Bkn" secondAttribute="bottom" constant="20" id="d38-5s-ENl"/>
+                            <constraint firstItem="Xt8-k2-j3J" firstAttribute="leading" secondItem="r6g-fa-RK8" secondAttribute="leading" constant="61" id="eMy-sl-dyf"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="Xt8-k2-j3J" secondAttribute="trailing" constant="61" id="h6I-ec-Ebe"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="Fr7-fW-XTe" secondAttribute="trailing" constant="61" id="kk7-Ga-TzQ"/>
+                            <constraint firstItem="r6g-fa-RK8" firstAttribute="trailing" secondItem="osv-TD-C9x" secondAttribute="trailing" constant="168" id="tlW-1F-8St"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r6g-fa-RK8"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="ZPW-4H-fNn" id="eef-Wz-ei1"/>
+                        <outlet property="currentTimeLabel" destination="3tL-Fg-Lwo" id="taA-j3-cdh"/>
+                        <outlet property="playerControllButton" destination="osv-TD-C9x" id="793-SA-yVQ"/>
+                        <outlet property="thumbnailImageView" destination="Fr7-fW-XTe" id="c2k-OM-QD9"/>
+                        <outlet property="tileSlider" destination="hst-Dz-yTf" id="DB0-Co-Xcy"/>
+                        <outlet property="titleLabel" destination="Xt8-k2-j3J" id="sWE-DO-5gN"/>
+                        <outlet property="totalTimeLabel" destination="SBE-8H-kYw" id="2HS-fc-OCp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3Q-Wb-x5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="24.776785714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
+</document>
