@@ -11,3 +11,6 @@ iOS_Programming
 
 3. YaDoList
 > File(Json)
+
+4. customView를 추가하는 방법
+> xib를 class화 하여 넣는 방법
